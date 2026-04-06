@@ -19,9 +19,7 @@ Proyecto2_ADA/
 - Python 3.10 o superior recomendado.
 - Instalar dependencias:
 
-```bash
-pip install -r requirements.txt
-```
+matplotlib>=3.7.0
 
 ## Cómo ejecutar
 
