@@ -10,7 +10,6 @@ Proyecto2_ADA/
 ├── test_cases.py     # Las 30 entradas de prueba fijas (compartidas)
 ├── egg_drop_dac.py   # Algoritmo DaC, benchmark, CSV y gráficas
 ├── egg_drop_dp.py    # Algoritmo DP, benchmark, CSV y gráficas
-├── requirements.txt  # Dependencias Python
 ├── outputs/          # Se crea al ejecutar (CSV e imágenes PNG)
 └── README.md         # Este archivo
 ```
