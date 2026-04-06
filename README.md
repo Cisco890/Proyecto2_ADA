@@ -80,7 +80,7 @@ Al rellenar la tabla en orden creciente de `e` y `f`, cada subproblema se calcul
 
 **Complejidad:** tiempo aproximado **O(E · F²)** con la tabla clásica (tres bucles anidados); espacio **O(E · F)** para la matriz (sin optimizaciones de espacio adicionales).
 
-## Fuentes (mezcla web y académica)
+## Fuentes 
 
 - [Divide and Conquer vs Dynamic Programming (Baeldung)](https://www.baeldung.com/cs/divide-and-conquer-vs-dynamic-programming)
 - [Egg Dropping Puzzle (GeeksforGeeks)](https://www.geeksforgeeks.org/dsa/egg-dropping-puzzle-dp-11/)
