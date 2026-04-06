@@ -1,0 +1,40 @@
+# Entorno virtual
+.venv/
+venv/
+env/
+
+# Bytecode y cachés de Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+.mypy_cache/
+.pytest_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Empaquetado / entornos de build
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# Salidas generadas al ejecutar benchmarks (CSV, PNG)
+outputs/
+
+# Herramientas / IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Variables de entorno locales
+.env
+.env.local
