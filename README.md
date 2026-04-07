@@ -6,10 +6,11 @@ Comparación experimental entre una solución **recursiva tipo Divide and Conque
 
 ```
 Proyecto2_ADA/
-├── main.py           # Punto de entrada con subcomandos (dac | dp | all)
+├── main.py           # Punto de entrada (dac | dp | all | compare)
 ├── test_cases.py     # Las 30 entradas de prueba fijas (compartidas)
 ├── egg_drop_dac.py   # Algoritmo DaC, benchmark, CSV y gráficas
 ├── egg_drop_dp.py    # Algoritmo DP, benchmark, CSV y gráficas
+├── compare_output.py # Gráfica comparativa DaC vs DP (tiempos)
 ├── outputs/          # Se crea al ejecutar (CSV e imágenes PNG)
 └── README.md         # Este archivo
 ```
@@ -19,7 +20,9 @@ Proyecto2_ADA/
 - Python 3.10 o superior recomendado.
 - Instalar dependencias:
 
-matplotlib>=3.7.0
+```bash
+pip install -r requirements.txt
+```
 
 ## Cómo ejecutar
 
@@ -29,7 +32,8 @@ Desde la carpeta del proyecto (`Proyecto2_ADA`):
 |---------|-------------|
 | `python main.py dac` | Ejecuta solo el enfoque recursivo DaC: genera `outputs/dac_results.csv` y las figuras `dac_timing.png`, `dac_recursive_calls.png`. |
 | `python main.py dp` | Ejecuta solo la DP bottom-up: `outputs/dp_results.csv`, `dp_timing.png`, `dp_operations.png`. |
-| `python main.py all` | Ejecuta DaC y después DP (misma carpeta `outputs/`). |
+| `python main.py all` | Ejecuta DaC y DP, todas las gráficas y **`dac_vs_dp_timing.png`** (comparativa de tiempos). |
+| `python main.py compare` | Solo regenera **`dac_vs_dp_timing.png`** leyendo `dac_results.csv` y `dp_results.csv` (debes haber corrido antes `dac` y `dp`, o `all`). |
 
 Carpeta de salida personalizada:
 
@@ -59,6 +63,10 @@ Los 30 pares `(huevos, pisos)` están definidos en `test_cases.py` y **no deben 
 
 - **CSV** `dp_results.csv`: columnas `eggs`, `floors`, `optimal_trials`, `time_ns`, `time_ms`, `dp_operations`.
 - **Gráficas**: tiempo vs pisos; operaciones DP (evaluaciones del bucle de transición) vs pisos.
+
+### Comparativa (`compare_output.py` vía `main.py all` o `compare`)
+
+- **`dac_vs_dp_timing.png`**: tres paneles (2, 3 y 4 huevos), eje X = pisos, eje Y = tiempo mediano (ms), curvas **DaC** y **DP** en el mismo gráfico por panel.
 
 La medición usa `time.perf_counter_ns()`, varias repeticiones por caso y **mediana** del tiempo; hay una corrida de calentamiento por caso antes de medir.
 
